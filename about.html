@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!--
+  Trang giới thiệu
+  Co-Authored-By: Claude <noreply@anthropic.com>
+-->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Co-Authored-By: Claude <noreply@anthropic.com>">
+  <title>Giới thiệu</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #1f1f1f;
+      --muted: #666;
+      --accent: #c96442;
+      --border: #e4e4e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --text: #eeeeee;
+        --muted: #aaa;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    main { flex: 1; max-width: 720px; width: 100%; margin: 0 auto; padding: 48px 16px; }
+    h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); margin-bottom: 16px; }
+    p { color: var(--muted); margin-bottom: 16px; }
+    a { color: var(--accent); }
+    footer {
+      padding: 20px 16px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.9rem; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Giới thiệu</h1>
+    <p>Đây là trang giới thiệu của website mẫu.</p>
+    <p><a href="index.html">← Quay về trang chủ</a></p>
+  </main>
+
+  <footer>
+    Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;
+  </footer>
+</body>
+</html>
