@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--
+  Website mẫu
+  Co-Authored-By: Claude <noreply@anthropic.com>
+-->
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Co-Authored-By: Claude <noreply@anthropic.com>">
+  <title>Trang chủ</title>
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --text: #1f1f1f;
+      --muted: #666;
+      --accent: #c96442;
+      --card: #ffffff;
+      --border: #e4e4e0;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1a1a1a;
+        --text: #eeeeee;
+        --muted: #aaa;
+        --card: #242424;
+        --border: #333;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      padding: 20px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    header .wrap, main, footer .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    header .wrap { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: 700; font-size: 1.25rem; color: var(--accent); }
+    nav a { color: var(--text); text-decoration: none; margin-left: 20px; }
+    nav a:hover { color: var(--accent); }
+    main { flex: 1; padding: 48px 16px; }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 12px; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 600px; }
+    .btn {
+      display: inline-block; margin-top: 24px; padding: 12px 24px;
+      background: var(--accent); color: #fff; border: none; border-radius: 8px;
+      font-size: 1rem; cursor: pointer;
+    }
+    .btn:hover { opacity: 0.9; }
+    .cards {
+      display: grid; gap: 16px; margin-top: 48px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; padding: 20px;
+    }
+    .card h3 { margin-bottom: 8px; }
+    .card p { color: var(--muted); }
+    footer {
+      padding: 20px 16px; border-top: 1px solid var(--border);
+      color: var(--muted); font-size: 0.9rem; text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="logo">MyWebsite</div>
+      <nav>
+        <a href="#">Trang chủ</a>
+        <a href="#gioi-thieu">Giới thiệu</a>
+        <a href="#lien-he">Liên hệ</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Xin chào! 👋</h1>
+      <p>Đây là một website mẫu đơn giản được viết bằng HTML, CSS và JavaScript.</p>
+      <button class="btn" id="greetBtn">Bấm vào tôi</button>
+      <p id="message" style="margin-top:16px;"></p>
+    </section>
+
+    <section class="cards" id="gioi-thieu">
+      <div class="card">
+        <h3>Nhanh</h3>
+        <p>Chỉ một file HTML duy nhất, không cần cài đặt gì.</p>
+      </div>
+      <div class="card">
+        <h3>Gọn gàng</h3>
+        <p>Giao diện responsive, hỗ trợ cả chế độ sáng và tối.</p>
+      </div>
+      <div class="card" id="lien-he">
+        <h3>Dễ chỉnh sửa</h3>
+        <p>Mở file trong trình soạn thảo và thay đổi tùy ý.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      Co-Authored-By: Claude &lt;noreply@anthropic.com&gt;
+    </div>
+  </footer>
+
+  <script>
+    // Co-Authored-By: Claude <noreply@anthropic.com>
+    let count = 0;
+    document.getElementById('greetBtn').addEventListener('click', () => {
+      count++;
+      document.getElementById('message').textContent =
+        `Bạn đã bấm ${count} lần!`;
+    });
+  </script>
+</body>
+</html>
